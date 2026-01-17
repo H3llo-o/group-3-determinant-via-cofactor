@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+    <title>Determinant Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.2/lib/browser/math.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="bg_video">
+        <source src="moving_background .mp4" type="video/mp4">
+    </video>
+
+    <div id="start_screen" class="start-screen">
+        <h1 class="header_title">Determinant Calculator</h1>
+        <p class="start-subtitle">via Cofactor Expansion</p>
+        <img src="Meerkat_idle_base.gif" alt="Meerkat" class="start-icon" />
+        <button onclick="startApp()" class="start-btn">Start</button>
+
+        <div id="backdrop" class="backdrop" style="display:none;"></div>
+        <button onclick="openInstructions()" class="start-btn" id="help">Help</button>
+        <div id="instructionsPanel" class="instructions-panel" style="display:none;">
+            <span class="close-btn" onclick="closeInstructions()">&times;</span>
+            <h2>Instructions</h2>
+            <p>Step 1: Enter the size of a <span class="highlight">Square Matrix</span> from 1 - 10 only</p>
+            <p>Step 2: Click <span class="highlight">Generate Matrix</span></p>
+            <p>Step 3: Fill in the matrix values</p>
+            <p>Step 4: Click <span class="highlight">Calculate Determinant</span></p>
+            <p>Step 5: View your result</p>
+            <p>Step 6: Click <span class="highlight">Reset</span> to start over</p>
+            <p class="note">Remember you can click this icon to go back<img src="Mascot_Run.gif" alt="Icon" class="instruct-icon"></p>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <div class="sidebar">
+            <h1 class="header_title" id="header_title">Determinant Calculator</h1>
+            <div class="operation-item" id="step1">
+                <h3 class="operation-item label">Matrix Size</h3><input type="number" id="size" min="1" max="10">
+                <div id="errorMessage" class="error-message" style="display:none;"></div>
+                <button type="button" onclick="matrix_input()">Generate Matrix</button>
+            </div>
+            
+            <div id="matrixContainer"></div>
+
+            <div class="operation-item" id="result" style="display:none;">
+                <div class="result-container">
+                    <h3 class="operation-item label">Determinant</h3>
+                    <div class="result-display">
+                        <span id="determinant" class="determinant-value">0.0000</span>
+                    </div>
+                    <img src="Dizzy.gif" alt="Result Icon" class="result-icon" />
+                    <div class="matrix-status">
+                        <p id="singularStatus" class="status-text"></p>
+                    </div>
+                </div>
+                <button type="button" onclick="reset_calculator()">Reset</button>
+            </div>
+        <button class="back-btn" onclick="goToStartScreen()"> Back</button>
+        <img src="Mascot_Run.gif" alt="Icon" class="side-icon" onclick="goToStartScreen()" style="cursor: pointer;" />
+    </div>
+
+    <script>
+        const video = document.getElementById('bg_video');
+        video.playbackRate = 0.65;
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
