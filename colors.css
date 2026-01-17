@@ -387,83 +387,262 @@ body {
 
 /* Mobile and Other Sizes */
 @media (max-width: 768px) {
-    .start-screen .header_title {
-        font-size: 48px;
-        margin-bottom: 10px;
-        line-height: 1.2;
+    .sidebar {
+        width: 90vw;
+        max-width: 100%;
+        padding: 30px 15px 30px 15px;  
+        margin: 20px auto 20px auto;    
+    }
+
+    .header_title {
+        font-size: 32px;                
+        margin-bottom: 15px;
+        line-height: 1.2;               
     }
 
     .start-subtitle {
-        font-size: 18px;
+        font-size: 18px;                
         margin-bottom: 20px;
         line-height: 1.3;
     }
 
-    .start-icon {
-        width: 200px;
-        height: 200px;
+    .operation-item {
+        padding: 10px;                  
+        margin-bottom: 15px;            
+    }
+
+    .operation-item .label {
+        font-size: 16px;                
+        margin-bottom: 8px;
+    }
+
+    .operation-item input {
+        width: 100%;
+        font-size: 16px;                
+        padding: 10px;                  
+    }
+
+    .operation-item button {
+        font-size: 14px;
+        padding: 12px;                  
+        min-height: 44px;               
+    }
+
+    .matrix-input {
+        font-size: 14px;                
+        padding: 6px 3px;               
+    }
+
+    #matrixTable td {
+        padding: 2px;                   
+    }
+
+    .result-display {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;                 
+    }
+
+    .determinant-value {
+        font-size: 28px;                
+        line-height: 1.2;
+    }
+
+    .result-icon {
+        width: 80px;                   
+        height: 80px;
+    }
+
+    .status-text {
+        font-size: 14px;                
+        padding: 10px;
+    }
+
+    .instructions-panel {
+        width: 90vw;                    
+        max-height: 70vh;               
+        padding: 20px;                  
+    }
+
+    .instructions-panel h2 {
+        font-size: 36px;                
         margin-bottom: 15px;
     }
 
-    .start-btn {
-        font-size: 22px;
-        width: 180px;
-        padding: 14px 24px;
-        margin-bottom: 30px;
+    .instructions-panel p {
+        font-size: 16px;                
+        line-height: 1.4;
     }
 
+    .main-panel {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .back-btn {
+        display: block;
+        padding: 12px 14px;             
+        font-size: 14px;
+        min-height: 44px;               
+    }
+
+    .side-icon {
+        display: none; 
+    }
 }
 
 @media (max-width: 480px) {
-    .start-screen .header_title {
-        font-size: 36px;
-        margin-bottom: 8px;
+    .sidebar {
+        width: 95vw;
+        padding: 20px 12px 20px 12px;   
+        margin: 10px auto 20px auto;
+    }
+
+    .header_title {
+        font-size: 26px;                
+        margin-bottom: 10px;
         line-height: 1.1;
     }
 
     .start-subtitle {
-        font-size: 16px;
+        font-size: 16px;                
         margin-bottom: 15px;
-        line-height: 1.2;
     }
 
     .start-icon {
-        width: 160px;
-        height: 160px;
+        width: 180px;                   
+        height: 180px;
+    }
+
+    .operation-item {
+        padding: 8px;
         margin-bottom: 12px;
     }
 
+    .operation-item .label {
+        font-size: 14px;
+    }
+
+    .operation-item input {
+        font-size: 16px;                
+        padding: 10px;
+    }
+
+    .operation-item button {
+        font-size: 12px;
+        padding: 10px;
+        min-height: 44px;
+    }
+
+    .matrix-input {
+        font-size: 12px;
+        padding: 4px 2px;
+    }
+
+    .determinant-value {
+        font-size: 22px;                
+    }
+
+    .result-icon {
+        width: 70px;                    
+        height: 70px;
+    }
+
     .start-btn {
-        font-size: 18px;
-        width: 150px;
-        padding: 12px 20px;
-        margin-bottom: 20px;
+        font-size: 16px;                
+        width: 160px;                   
+        padding: 10px 24px;
+    }
+
+    .instructions-panel {
+        width: 95vw;
+        max-height: 60vh;
+        padding: 15px;
+    }
+
+    .instructions-panel h2 {
+        font-size: 28px;
+    }
+
+    .instructions-panel p {
+        font-size: 14px;
+    }
+
+    .close-btn {
+        font-size: 32px;              
+    }
+
+    .back-btn {
+        display: block;
+        padding: 10px 12px;
+        font-size: 13px;
     }
 }
 
 @media (max-width: 320px) {
-    .start-screen .header_title {
-        font-size: 28px;
-        margin-bottom: 6px;
-        line-height: 1.1;
+    .sidebar {
+        width: 98vw;
+        padding: 15px 10px 15px 10px;
+        margin: 5px auto 15px auto;
+    }
+
+    .header_title {
+        font-size: 22px;
+        margin-bottom: 8px;
     }
 
     .start-subtitle {
         font-size: 14px;
-        margin-bottom: 12px;
-        line-height: 1.2;
-    }
-
-    .start-icon {
-        width: 130px;
-        height: 130px;
         margin-bottom: 10px;
     }
 
+    .start-icon {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .operation-item {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .operation-item button {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .matrix-input {
+        font-size: 11px;
+    }
+
+    .determinant-value {
+        font-size: 20px;
+    }
+
     .start-btn {
-        font-size: 16px;
-        width: 130px;
-        padding: 10px 18px;
-        margin-bottom: 15px;
+        font-size: 14px;
+        width: 140px;
+        padding: 8px 16px;
+    }
+
+    .instructions-panel {
+        width: 98vw;
+        max-height: 50vh;
+        padding: 12px;
+    }
+
+    .instructions-panel h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .instructions-panel p {
+        font-size: 12px;
+    }
+
+    .back-btn {
+        padding: 8px 10px;
+        font-size: 12px;
     }
 }
