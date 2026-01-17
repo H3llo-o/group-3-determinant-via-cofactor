@@ -70,5 +70,3 @@ To run the site locally, follow the instructions below:
 You can also access the site through the link: 
 
 <https://h3llo-o.github.io/group-3-determinant-via-cofactor/>
-
-* * * * *
