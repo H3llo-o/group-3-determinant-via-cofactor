@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'Pixellari';
-    src: url('./fonts/Pixellari.ttf') format('truetype');
+    src: url('./font/Pixellari.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -646,3 +646,4 @@ body {
         font-size: 12px;
     }
 }
+
